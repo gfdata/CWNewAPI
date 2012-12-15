@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://connectwise.somethingdigital.com/v4_6_release/services/system_io/integration_io.asmx?wsdl" docRef="https://connectwise.somethingdigital.com/v4_6_release/services/system_io/integration_io.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://connectwise.somethingdigital.com/v4_6_release/services/system_io/integration_io.asmx" xmlns:q1="http://tempuri.org/" binding="q1:integration_ioSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://connectwise.somethingdigital.com/v4_6_release/services/system_io/integration_io.asmx" xmlns:q2="http://tempuri.org/" binding="q2:integration_ioSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

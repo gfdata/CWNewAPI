@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ProcessClientAction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actionString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessClientActionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessClientActionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessMspApiAction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actionString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessMspApiActionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessMspApiActionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetToken">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTokenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExternalAuthentication">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="theToken" type="tns:SWSToken" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SWSToken">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="secGUID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MemberID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PasswordHash" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ExternalAuthenticationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExternalAuthenticationResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ProcessClientActionSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessClientAction" />
+  </wsdl:message>
+  <wsdl:message name="ProcessClientActionSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessClientActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessMspApiActionSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessMspApiAction" />
+  </wsdl:message>
+  <wsdl:message name="ProcessMspApiActionSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessMspApiActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetToken" />
+  </wsdl:message>
+  <wsdl:message name="GetTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExternalAuthenticationSoapIn">
+    <wsdl:part name="parameters" element="tns:ExternalAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="ExternalAuthenticationSoapOut">
+    <wsdl:part name="parameters" element="tns:ExternalAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessClientActionHttpGetIn">
+    <wsdl:part name="actionString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ProcessClientActionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ProcessMspApiActionHttpGetIn">
+    <wsdl:part name="actionString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ProcessMspApiActionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTokenHttpGetIn" />
+  <wsdl:message name="GetTokenHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ProcessClientActionHttpPostIn">
+    <wsdl:part name="actionString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ProcessClientActionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ProcessMspApiActionHttpPostIn">
+    <wsdl:part name="actionString" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ProcessMspApiActionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTokenHttpPostIn" />
+  <wsdl:message name="GetTokenHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="integration_ioSoap">
+    <wsdl:operation name="ProcessClientAction">
+      <wsdl:input message="tns:ProcessClientActionSoapIn" />
+      <wsdl:output message="tns:ProcessClientActionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMspApiAction">
+      <wsdl:input message="tns:ProcessMspApiActionSoapIn" />
+      <wsdl:output message="tns:ProcessMspApiActionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetToken">
+      <wsdl:input message="tns:GetTokenSoapIn" />
+      <wsdl:output message="tns:GetTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExternalAuthentication">
+      <wsdl:input message="tns:ExternalAuthenticationSoapIn" />
+      <wsdl:output message="tns:ExternalAuthenticationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="integration_ioHttpGet">
+    <wsdl:operation name="ProcessClientAction">
+      <wsdl:input message="tns:ProcessClientActionHttpGetIn" />
+      <wsdl:output message="tns:ProcessClientActionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMspApiAction">
+      <wsdl:input message="tns:ProcessMspApiActionHttpGetIn" />
+      <wsdl:output message="tns:ProcessMspApiActionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetToken">
+      <wsdl:input message="tns:GetTokenHttpGetIn" />
+      <wsdl:output message="tns:GetTokenHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="integration_ioHttpPost">
+    <wsdl:operation name="ProcessClientAction">
+      <wsdl:input message="tns:ProcessClientActionHttpPostIn" />
+      <wsdl:output message="tns:ProcessClientActionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMspApiAction">
+      <wsdl:input message="tns:ProcessMspApiActionHttpPostIn" />
+      <wsdl:output message="tns:ProcessMspApiActionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetToken">
+      <wsdl:input message="tns:GetTokenHttpPostIn" />
+      <wsdl:output message="tns:GetTokenHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="integration_ioSoap" type="tns:integration_ioSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessClientAction">
+      <soap:operation soapAction="http://tempuri.org/ProcessClientAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMspApiAction">
+      <soap:operation soapAction="http://tempuri.org/ProcessMspApiAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetToken">
+      <soap:operation soapAction="http://tempuri.org/GetToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalAuthentication">
+      <soap:operation soapAction="http://tempuri.org/ExternalAuthentication" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="integration_ioSoap12" type="tns:integration_ioSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessClientAction">
+      <soap12:operation soapAction="http://tempuri.org/ProcessClientAction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMspApiAction">
+      <soap12:operation soapAction="http://tempuri.org/ProcessMspApiAction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetToken">
+      <soap12:operation soapAction="http://tempuri.org/GetToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExternalAuthentication">
+      <soap12:operation soapAction="http://tempuri.org/ExternalAuthentication" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="integration_ioHttpGet" type="tns:integration_ioHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ProcessClientAction">
+      <http:operation location="/ProcessClientAction" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMspApiAction">
+      <http:operation location="/ProcessMspApiAction" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetToken">
+      <http:operation location="/GetToken" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="integration_ioHttpPost" type="tns:integration_ioHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ProcessClientAction">
+      <http:operation location="/ProcessClientAction" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMspApiAction">
+      <http:operation location="/ProcessMspApiAction" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetToken">
+      <http:operation location="/GetToken" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="integration_io">
+    <wsdl:port name="integration_ioSoap" binding="tns:integration_ioSoap">
+      <soap:address location="https://connectwise.somethingdigital.com/v4_6_release/services/system_io/integration_io.asmx" />
+    </wsdl:port>
+    <wsdl:port name="integration_ioSoap12" binding="tns:integration_ioSoap12">
+      <soap12:address location="https://connectwise.somethingdigital.com/v4_6_release/services/system_io/integration_io.asmx" />
+    </wsdl:port>
+    <wsdl:port name="integration_ioHttpGet" binding="tns:integration_ioHttpGet">
+      <http:address location="https://connectwise.somethingdigital.com/v4_6_release/services/system_io/integration_io.asmx" />
+    </wsdl:port>
+    <wsdl:port name="integration_ioHttpPost" binding="tns:integration_ioHttpPost">
+      <http:address location="https://connectwise.somethingdigital.com/v4_6_release/services/system_io/integration_io.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
