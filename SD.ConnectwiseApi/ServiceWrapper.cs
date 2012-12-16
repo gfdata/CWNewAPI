@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using SD.ConnectwiseApi.Config;
 using System.Configuration;
+using SD.ConnectwiseApi.Util;
 
 namespace SD.ConnectwiseApi
 {
@@ -11,6 +12,7 @@ namespace SD.ConnectwiseApi
     {
         private CWApi.integration_io client;
         private ConnectwiseConfigSection config;
+        private Logger log = new Logger(true);
         public ServiceWrapper()
         {
             client = new CWApi.integration_io();
@@ -21,7 +23,10 @@ namespace SD.ConnectwiseApi
         public string ProcessAction(string actionXml)
         {
             var request = AddAuthCredentials(actionXml);
-            return client.ProcessClientAction(request);   
+            log.Write(request);
+            var response =  client.ProcessClientAction(request);
+            log.Write(response);
+            return response;
         }
 
         private string AddAuthCredentials(string message)
