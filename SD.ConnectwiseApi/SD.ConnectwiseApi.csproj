@@ -48,6 +48,7 @@
     <Compile Include="Config\ApiCredentialsElement.cs" />
     <Compile Include="Config\ConnectwiseConfigSection.cs" />
     <Compile Include="Config\LoggingElement.cs" />
+    <Compile Include="Enum\MemberProperties.cs" />
     <Compile Include="MembersApi.cs" />
     <Compile Include="MessageConstants.cs" />
     <Compile Include="Model\MemberInfo.cs" />

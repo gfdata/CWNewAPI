@@ -15,6 +15,8 @@ namespace CWApi.Tests
         {
             var api = new MembersApi();
             var response = api.FindMembers(MemberProperties.LastName, "Ferrie");
+            Assert.IsNotNull(response);
+            Assert.AreNotEqual(0, response.Count());
         }
     }
 }

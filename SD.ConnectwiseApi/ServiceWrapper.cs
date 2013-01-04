@@ -12,15 +12,15 @@ namespace SD.ConnectwiseApi
     {
         private CWApi.integration_io client;
         private ConnectwiseConfigSection config;
-        private Logger log = new Logger(true);
+        protected Logger log = new Logger(true);
+
         public ServiceWrapper()
         {
             client = new CWApi.integration_io();
             config = (ConnectwiseConfigSection)ConfigurationManager.GetSection("connectwise");
-
         }
-
-        public string ProcessAction(string actionXml)
+        
+        protected string ProcessAction(string actionXml)
         {
             var request = AddAuthCredentials(actionXml);
             log.Write(request);
