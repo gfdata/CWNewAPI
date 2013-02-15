@@ -59,7 +59,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="ServiceTicketsApi.cs" />
-    <Compile Include="ServiceWrapper.cs" />
+    <Compile Include="ServiceBase.cs" />
     <Compile Include="TimeEntriesApi.cs" />
     <Compile Include="Util\Logger.cs" />
     <Compile Include="Web References\CWApi\Reference.cs">

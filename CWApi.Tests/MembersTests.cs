@@ -18,5 +18,15 @@ namespace CWApi.Tests
             Assert.IsNotNull(response);
             Assert.AreNotEqual(0, response.Count());
         }
+
+        [TestMethod]
+        public void TestMemberLogin()
+        {
+            var api = new MembersApi();
+            var response1 = api.ValidateLogin("gferrie", "ferrie");
+            Assert.IsTrue(response1);
+            var response2 = api.ValidateLogin("gferrie", "ferrie!!!");
+            Assert.IsFalse(response2);
+        }
     }
 }
