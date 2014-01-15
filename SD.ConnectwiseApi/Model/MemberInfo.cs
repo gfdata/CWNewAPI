@@ -3,8 +3,9 @@ using System.Xml;
 
 namespace SD.ConnectwiseApi.Model
 {
-    public class MemberInfo
+    public sealed  class MemberInfo
     {
+
         public string MemberID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

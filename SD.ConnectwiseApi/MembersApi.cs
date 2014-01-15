@@ -12,9 +12,10 @@ namespace SD.ConnectwiseApi
     {
         public IEnumerable<MemberInfo> FindMembers(MemberProperties property, string value)
         {
-            var message = string.Format(MessageConstants.MembersFindMembers, property, value);
+            var message = string.Format(MessageConstants.Members_FindMembers, property, value);
             var doc = new XmlDocument();            
             doc.LoadXml(ProcessAction(message));
+
             return doc.DocumentElement.ChildNodes.Cast<XmlNode>()
                     .First(q => "Results".Equals(q.Name))
                     .ChildNodes.Cast<XmlNode>()
@@ -23,7 +24,7 @@ namespace SD.ConnectwiseApi
 
         public bool ValidateLogin(string username, string password)
         {
-            var message = string.Format(MessageConstants.MembersCheckCredentials, username, password);
+            var message = string.Format(MessageConstants.Members_CheckCredentials, username, password);
             var doc = new XmlDocument();
             var responseText = ProcessAction(message);
             doc.LoadXml(responseText);
