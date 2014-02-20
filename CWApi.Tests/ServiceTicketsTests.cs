@@ -2,8 +2,6 @@
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SD.ConnectwiseApi;
-using SD.ConnectwiseApi.Model;
-using SD.ConnectwiseApi.Enum;
 
 namespace CWApi.Tests
 {
@@ -20,14 +18,14 @@ namespace CWApi.Tests
         [TestInitialize]
         public void Init()
         {
-            svc = new ServiceTicketsApi();
+            
         }
 
         [TestMethod]
         public void FindTickets_Test()
         {
             var request = new FindServiceTicketRequest();
-            request.Filters.Add(new FilterCriteria<ServiceTicketProperties> { TargetField = ServiceTicketProperties.CompanyName, Value = "WTAS", Operation = FilterOperation.Contains });
+            request.Filters.Add(new FilterCriteria<ServiceTicketProperties> { TargetField = ServiceTicketProperties.SRServiceRecID, Value = "16898", Operation = FilterOperation.Equal });
             request.Limit = 10;
 
             var result = svc.FindServiceTickets(request);

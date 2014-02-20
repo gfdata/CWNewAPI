@@ -13,5 +13,8 @@ namespace SD.ConnectwiseApi
         internal static string ServiceTickets_GetTicket = "";
         internal static string ServiceTickets_UpdateTickets = "";
 
+        // Invoices
+        internal static string Invoices_FindInvoices = "<GetPartnerInvoiceListAction xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><CompanyName>[companyId]</CompanyName><IntegrationLoginId>[integratorUsername]</IntegrationLoginId><IntegrationPassword>[integratorPassword]</IntegrationPassword><Conditions>{0}</Conditions></GetPartnerInvoiceListAction>";
+ 
     }
 }

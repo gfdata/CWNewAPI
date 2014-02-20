@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml;
 
-namespace SD.ConnectwiseApi.Model
+namespace SD.ConnectwiseApi
 {
     public sealed  class MemberInfo
     {

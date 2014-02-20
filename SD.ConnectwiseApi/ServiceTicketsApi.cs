@@ -1,5 +1,4 @@
-﻿using SD.ConnectwiseApi.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +11,7 @@ namespace SD.ConnectwiseApi
     {
         public IEnumerable<ServiceTicketInfo> FindServiceTickets(FindServiceTicketRequest request)
         {
-            var filterExpression = string.Join("and", request.Filters.Select(q => q.ToString()).ToArray());
+            var filterExpression = string.Join(" AND ", request.Filters.Select(q => q.ToString()).ToArray());
             var message = string.Format(MessageConstants.ServiceTickets_FindTickets, filterExpression);
 
             var doc = new XmlDocument();

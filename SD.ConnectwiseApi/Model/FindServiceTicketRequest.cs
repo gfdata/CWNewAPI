@@ -1,10 +1,9 @@
-﻿using SD.ConnectwiseApi.Enum;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SD.ConnectwiseApi.Model
+namespace SD.ConnectwiseApi
 {
     public sealed class FindServiceTicketRequest
     {

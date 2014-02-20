@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SD.ConnectwiseApi.Model
+namespace SD.ConnectwiseApi
 {
     public static class FilterOperation
     {
