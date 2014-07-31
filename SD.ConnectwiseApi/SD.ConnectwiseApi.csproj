@@ -49,11 +49,15 @@
     <Compile Include="Config\ApiCredentialsElement.cs" />
     <Compile Include="Config\ConnectwiseConfigSection.cs" />
     <Compile Include="Config\LoggingElement.cs" />
+    <Compile Include="ContactsApi.cs" />
+    <Compile Include="Enum\ContactProperties.cs" />
     <Compile Include="Enum\InvoiceProperties.cs" />
     <Compile Include="Enum\MemberProperties.cs" />
     <Compile Include="Enum\ServiceTicketProperties.cs" />
     <Compile Include="Enum\ClientProperties.cs" />
+    <Compile Include="Model\ContactInfo.cs" />
     <Compile Include="Model\FindClientsRequest.cs" />
+    <Compile Include="Model\FindContactsRequest.cs" />
     <Compile Include="Model\FindInvoiceRequest.cs" />
     <Compile Include="Model\InvoiceInfo.cs" />
     <Compile Include="InvoicesApi.cs" />

@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30626.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SD.ConnectwiseApi", "SD.ConnectwiseApi.csproj", "{74089226-E880-4CB4-8E05-C979EB584DD2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWApi.Tests", "..\CWApi.Tests\CWApi.Tests.csproj", "{5C2FCBA5-3488-4893-948D-84A61120F0D8}"
@@ -14,10 +16,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketFinder", "..\TicketFinder\TicketFinder.csproj", "{B210CCFF-08AF-49E4-9A4A-B931A8C11229}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CWContactSearchService", "..\CWContactSearchService\CWContactSearchService.csproj", "{1FACD81B-7DF0-4614-BF66-8F296C843645}"
+EndProject
 Global
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = SD.ConnectwiseApi.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -35,8 +36,15 @@ Global
 		{B210CCFF-08AF-49E4-9A4A-B931A8C11229}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B210CCFF-08AF-49E4-9A4A-B931A8C11229}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B210CCFF-08AF-49E4-9A4A-B931A8C11229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FACD81B-7DF0-4614-BF66-8F296C843645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FACD81B-7DF0-4614-BF66-8F296C843645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FACD81B-7DF0-4614-BF66-8F296C843645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FACD81B-7DF0-4614-BF66-8F296C843645}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = SD.ConnectwiseApi.vsmdi
 	EndGlobalSection
 EndGlobal

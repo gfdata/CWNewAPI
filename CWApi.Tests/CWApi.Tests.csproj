@@ -53,6 +53,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MembersTests.cs" />
     <Compile Include="ServiceTicketsTests.cs" />
+    <Compile Include="ContactServicesTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SD.ConnectwiseApi\SD.ConnectwiseApi.csproj">
