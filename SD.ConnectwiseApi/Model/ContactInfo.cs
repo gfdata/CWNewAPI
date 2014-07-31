@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Xml;
 
 namespace SD.ConnectwiseApi
 {
+    [DataContract]
     public sealed class ContactInfo
     {
         public static ContactInfo Create(XmlNode result)
@@ -40,36 +42,37 @@ namespace SD.ConnectwiseApi
             return item;
         }
 
+        [DataMember]
         public string FirstName { get; set; }
-
+        [DataMember]
         public int Id { get; set; }
-
+        [DataMember]
         public string LastName { get; set; }
-
+        [DataMember]
         public string CompanyName { get; set; }
-
+        [DataMember]
         public int CompanyRecID { get; set; }
-
+        [DataMember]
         public string Phone { get; set; }
-
+        [DataMember]
         public string Email { get; set; }
-
+        [DataMember]
         public string ContactType { get; set; }
-
+        [DataMember]
         public string DefaultFlag { get; set; }
-
+        [DataMember]
         public string AddressLine1 { get; set; }
-
+        [DataMember]
         public string AddressLine2 { get; set; }
-
+        [DataMember]
         public string City { get; set; }
-
+        [DataMember]
         public string State { get; set; }
-
+        [DataMember]
         public string Zip { get; set; }
-
+        [DataMember]
         public string Country { get; set; }
-
+        [DataMember]
         public int ContactRecID { get; set; }
     }
 }

@@ -17,6 +17,6 @@ namespace CWContactSearchService
     public interface ICWContacts
     {
         [OperationContract]
-        IEnumerable<ContactInfo> FindContacts(FindContactsRequest request);
+        IEnumerable<ContactInfo> FindContacts(string firstname, string lastname, string company);
     }
 }
