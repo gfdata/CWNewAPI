@@ -26,15 +26,18 @@ namespace SD.ConnectwiseApi
             var formattedValue = string.Empty;
             switch (typename)
             {
+                case "System.Decimal":
+                    formattedValue = string.Format("{0}", this.Value);
+                    break;
                 case "System.Int32":
                     formattedValue = string.Format("{0}", this.Value);
-                    throw new NotImplementedException();
+                    break;
                 case "System.Boolean":
                     formattedValue = string.Format("{0}", this.Value);
                     throw new NotImplementedException();
                 case "System.DateTime":
-                    formattedValue = string.Format("'{0}'", this.Value);
-                    throw new NotImplementedException();
+                    formattedValue = string.Format("[{0}]", this.Value);
+                    break;
                 default:
                     formattedValue = string.Format("'{0}'", this.Value);
                     break;

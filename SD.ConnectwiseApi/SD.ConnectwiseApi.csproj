@@ -55,10 +55,12 @@
     <Compile Include="Enum\MemberProperties.cs" />
     <Compile Include="Enum\ServiceTicketProperties.cs" />
     <Compile Include="Enum\ClientProperties.cs" />
+    <Compile Include="Enum\TimeEntryProperties.cs" />
     <Compile Include="Model\ContactInfo.cs" />
     <Compile Include="Model\FindClientsRequest.cs" />
     <Compile Include="Model\FindContactsRequest.cs" />
     <Compile Include="Model\FindInvoiceRequest.cs" />
+    <Compile Include="Model\FindTimeEntriesRequest.cs" />
     <Compile Include="Model\InvoiceInfo.cs" />
     <Compile Include="InvoicesApi.cs" />
     <Compile Include="Model\FilterCriteria.cs" />
@@ -68,6 +70,8 @@
     <Compile Include="MessageConstants.cs" />
     <Compile Include="Model\MemberInfo.cs" />
     <Compile Include="Model\ServiceTicketInfo.cs" />
+    <Compile Include="Model\TimeEntryInfo.cs" />
+    <Compile Include="Model\ValueTypeConversionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>

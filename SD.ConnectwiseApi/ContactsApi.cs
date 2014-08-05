@@ -23,5 +23,10 @@ namespace SD.ConnectwiseApi
                 .ChildNodes.Cast<XmlNode>()
                 .Select(q => ContactInfo.Create(q));
         }
+
+        public ContactInfo GetContact(int id)
+        {
+            return new ContactInfo();
+        }
     }
 }

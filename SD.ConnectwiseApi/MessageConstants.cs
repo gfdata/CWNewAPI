@@ -16,7 +16,10 @@ namespace SD.ConnectwiseApi
         // Invoices
         internal static string Invoices_FindInvoices = "<GetPartnerInvoiceListAction xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><CompanyName>[companyId]</CompanyName><IntegrationLoginId>[integratorUsername]</IntegrationLoginId><IntegrationPassword>[integratorPassword]</IntegrationPassword><Conditions>{0}</Conditions></GetPartnerInvoiceListAction>";
 
-
+        // Contacts
         internal static string Contacts_FindContacts = "<FindPartnerContactsAction xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><CompanyName>[companyId]</CompanyName><IntegrationLoginId>[integratorUsername]</IntegrationLoginId><IntegrationPassword>[integratorPassword]</IntegrationPassword><Conditions>{0}</Conditions></FindPartnerContactsAction>";
+
+        // Time Entry
+        internal static string TimeEntry_FindTimeEntries = "<FindPartnerTimeEntriesAction xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><CompanyName>[companyId]</CompanyName><IntegrationLoginId>[integratorUsername]</IntegrationLoginId><IntegrationPassword>[integratorPassword]</IntegrationPassword><Conditions>{0}</Conditions></FindPartnerTimeEntriesAction>";
     }
 }
